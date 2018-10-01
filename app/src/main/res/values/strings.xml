@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mycodingcleanic</string>
+    <string name="secondactivity">SecondActivity</string>
+    <string name="send">send</string>
 </resources>

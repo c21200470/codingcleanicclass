@@ -1,15 +1,19 @@
 package a21200470.mycodingcleanic;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView tv;
     Button bt;
+    public static final String EXTRA_MESSAGE = "This is it.";
+    Button SecondAvtiviyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         tv = findViewById(R.id.txt);
         bt = findViewById(R.id.button);
-
+        SecondAvtiviyButton = findViewById(R.id.secondactivitybutton);
         bt.setOnClickListener(this);
     }
 
@@ -29,4 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             tv.setText("Bye World!");
         }
     }
+
+    public void sendMessage(View view) {
+        Intent intent = new Intent(this, DisplayMessageActivity.class);
+        EditText editText = findViewById(R.id.editText);
+        String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 }
+
