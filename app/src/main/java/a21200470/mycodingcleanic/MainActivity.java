@@ -3,6 +3,7 @@ package a21200470.mycodingcleanic;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button bt;
     public static final String EXTRA_MESSAGE = "This is it.";
     Button SecondAvtiviyButton;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bt = findViewById(R.id.button);
         SecondAvtiviyButton = findViewById(R.id.secondactivitybutton);
         bt.setOnClickListener(this);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolBar);
+        setSupportActionBar(toolbar);
     }
 
     @Override
