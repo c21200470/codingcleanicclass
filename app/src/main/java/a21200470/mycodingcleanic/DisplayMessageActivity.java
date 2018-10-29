@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import a21200470.mycodingcleanic.controller.MainActivity;
+
 public class DisplayMessageActivity extends AppCompatActivity {
 
 

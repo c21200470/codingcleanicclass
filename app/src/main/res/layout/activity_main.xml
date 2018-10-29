@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:id="@+id/swipeContainer"
+    tools:context=".controller.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -77,6 +78,22 @@
                 android:text="@string/send" />
         </LinearLayout>
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#f2f2f2"
+            tools:context=".controller.MainActivity"
+            tools:showIn="@layout/activity_main" />
+
+        <TextView
+            android:id="@+id/disconnetced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/internet"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
